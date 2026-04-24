@@ -2,9 +2,9 @@ import { useState, useMemo, useEffect, useCallback, useRef, useLayoutEffect } fr
 import * as XLSX from 'xlsx'
 import { APP_TABS, DEFAULT_STATUS, ORDER_STATUSES, STATUS_CLASS_MAP } from './config/appConfig'
 
-const STORAGE_KEY = 'tamanh_orders'
+const STORAGE_KEY = 'simple_orders'
 const useSheets = import.meta.env.VITE_USE_SHEETS === 'true'
-const LOGIN_STORAGE_KEY = 'tamanh_crm_login_ok'
+const LOGIN_STORAGE_KEY = 'simple_crm_login_ok'
 const AUTH_USERNAME = import.meta.env.VITE_LOGIN_USERNAME || ''
 const AUTH_PASSWORD = import.meta.env.VITE_LOGIN_PASSWORD || ''
 const authRequired = AUTH_USERNAME !== '' && AUTH_PASSWORD !== ''
@@ -453,7 +453,7 @@ export default function App() {
     const ws = XLSX.utils.json_to_sheet(data)
     const wb = XLSX.utils.book_new()
     XLSX.utils.book_append_sheet(wb, ws, 'Đơn Hàng')
-    XLSX.writeFile(wb, `TamAnh_DonHang_${new Date().toLocaleDateString('vi-VN').replace(/\//g, '-')}.xlsx`)
+    XLSX.writeFile(wb, `simple_DonHang_${new Date().toLocaleDateString('vi-VN').replace(/\//g, '-')}.xlsx`)
   }
 
   const isMayTab = tab === 'may-management'
@@ -613,7 +613,7 @@ export default function App() {
     <div className="layout">
       <aside className="sidebar">
         <div className="sidebar-logo">
-          <h1>Tâm Anh</h1>
+          <h1>Simple</h1>
           <p>Quản lý đơn hàng{useSheets ? ' · Google Sheet' : ''}</p>
           {authRequired && (
             <button type="button" className="btn btn-sm sidebar-logout" onClick={logout}>

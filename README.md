@@ -1,4 +1,4 @@
-# Tâm Anh - Quản Lý Đơn Hàng
+# Simple CRM - Quản Lý Đơn Hàng
 
 Ứng dụng quản lý đơn hàng may & thêu, tương thích file Excel gốc.
 
@@ -23,15 +23,15 @@
 - Vào https://github.com và đăng ký tài khoản (nếu chưa có)
 
 ### Bước 2: Upload code lên GitHub
-- Tạo repository mới tên `tamanh-crm`
+- Tạo repository mới tên `simple-crm`
 - Upload toàn bộ thư mục này lên
 
 ### Bước 3: Deploy lên Vercel
 1. Vào https://vercel.com và đăng ký bằng GitHub
 2. Nhấn "New Project"
-3. Chọn repository `tamanh-crm`
+3. Chọn repository `simple-crm`
 4. Vercel tự nhận ra Vite, nhấn Deploy
-5. Sau ~1 phút có link dạng: `tamanh-crm.vercel.app`
+5. Sau ~1 phút có link dạng: `simple-crm.vercel.app`
 
 ## Google Sheet làm backend (nhiều người dùng chung dữ liệu)
 
