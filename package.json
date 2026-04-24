@@ -1,0 +1,21 @@
+{
+  "name": "tamanh-crm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "ggg": "git add . && (git commit -m \"update $(date +%Y-%m-%d\\ %H:%M)\" || true) && git add . && (git commit -m \"update $(date +%Y-%m-%d\\ %H:%M) (post)\" || true) && git pull --rebase origin main && git push"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}
